@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #8a2be2; /* Purple background color */
+            padding-top: 50px;
+            position: relative; /* Required for absolute positioning */
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        p {
+            color: #fff; /* White text color */
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            position: absolute;
+            left: 20px; /* Adjust positioning as needed */
+            top: 50%; /* Adjust positioning as needed */
+            transform: translateY(-50%); /* Center vertically */
+            border-radius: 50%; /* Make it circular */
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+        /* Heart Beat Animation */
+        .heart {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            color: red;
+            font-size: 54px; /* Adjusted font-size for a larger heart */
+            transform: translate(-50%, -50%);
+            animation: beat 1s infinite alternate;
+        }
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+        /* Innocent Face Emoji */
+        .innocent-face {
+            position: absolute;
+            font-size: 48px;
+            transform: translate(-50%, -50%);
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.imgur.com/d3LFSJU.jpeg" alt="US Image">
+    <div id="hearts"></div>
+    <div class="innocent-face">&#128522;</div>
+    <h1>I'm Sorry</h1>
+    <p>Dear Moonpie❤️,</p>
+    <p>'I ve been replaying our conversation over and over again in my head 😔, and I can't shake off this feeling of guilt 🤕 I want you to know that I'm truly sorry 🤒 from the bottom of my heart ❤️. Our love means everything to me ❤️❤️❤️❤️,
+
+        I know I messed up, 😭 but please believe me when I say that my love for you is beyond measure 💜💜. It's the kind of love that's unwavering, unconditional, and infinite 🥰. It's the kind of love that fills every corner of my heart and soul, reminding me of how lucky I am to have you in my life ❤️❤️❤️❤️❤️😮. Our Love is never ending just like the hearts appearing on your screen🤭🤭
+        You're my rock, my sunshine, and my everything. I love you more than words can express ☺😚😚, and our love is truly great and never-ending. 💖</p>
+    
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '&#10084;'; // Unicode character for heart
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.top = Math.random() * window.innerHeight + 'px';
+            document.getElementById('hearts').appendChild(heart);
+        }
+        setInterval(createHeart, 500); // Creating hearts more frequently
+    </script>
+</body>
+</html>
